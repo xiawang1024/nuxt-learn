@@ -40,7 +40,12 @@ export default {
   },
   asyncData({req}) {
     //   console.log(req)
-  }
+  },
+  fetch({store}) {
+    console.log(store)
+    store.dispatch('users/add_users','wangxia')
+  },
+  // middleware:['users']
 }
 </script>
 
